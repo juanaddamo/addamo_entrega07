@@ -11,8 +11,19 @@ body{
     font-family: 'Open Sans';
 }   
 
+/* estilo del menu de bootstrap para menu index.html */
+.navbar {
+    background-color: #d49d81;
+    font-family:'Open Sans';
+}
+
+.dropdown-menu{
+    background-color: #d49d81;
+}
+
+
 /* estilo del menu */
-nav ul{
+.menuUl{
     display: flex;
     background-image: linear-gradient(#B4846C, #fcd4c0);
     justify-content: space-evenly;
@@ -52,6 +63,7 @@ nav ul li{
     border-color: black;
     border-width: 0.1rem;
     padding: 0.5rem;
+    list-style-type: none;
 }
 
 .botonesMenu{
@@ -116,7 +128,6 @@ nav ul li{
 footer{
     padding: 10px;
     font-family: 'Open Sans';
-    font-size: small;
     background-image: linear-gradient(#B4846C, #fcd4c0);
     text-align: center;
     color: black;
@@ -126,7 +137,6 @@ footer{
 /* mq para tablets de 768px */
 @media screen and (min-width: 768px) {
     .estiloIndex{
-        height: 90vh;
         display: grid;
         grid-template-areas: "saludoUno saludoUno"
         "parrafoUno parrafoUno"
@@ -162,10 +172,9 @@ footer{
 
 }
 
-/* mq para desktops de 1024px */
+/* mq para monitores de 1024px */
 @media screen and (min-width: 1024px) {
     .estiloIndex{
-        height: 90vh;
         display: grid;
         grid-template-areas: "saludoUno saludoUno saludoUno"
         "parrafoUno parrafoUno parrafoUno"
@@ -211,10 +220,9 @@ footer{
 /* estilo main about */
 .estiloAbout{
     margin: 0.5rem;
-    height: 80vh;
     display: grid;
     grid-template-areas: "aboutCompleta"
-    "imagenAbout";
+    "carouselSlide";
 }
 
 .aboutCompleta{
@@ -222,9 +230,8 @@ footer{
     text-align: justify;
 }
 
-.imagenAbout{
-    grid-template-areas: imagenAbout;
-    display: none;
+.carouselSlide{
+    grid-template-areas: carouselSlide;
 }
 
 /* defino media queries para about.html */
@@ -232,31 +239,21 @@ footer{
 @media screen and (min-width: 768px) {
     .estiloAbout{
         margin: 0.5rem;
-        height: 80vh;
         display: grid;
-        grid-template-areas: "aboutCompleta"
-        "imagenAbout";
-    }
-
-    .imagenAbout{
-        display: block;
-        margin: 0 auto;
+        grid-template-areas: "aboutCompleta carouselSlide";
+        justify-content: center;
+        align-items: center
     }
 }
 
-/* mq para tablets de 1024px */
+/* mq para monitores de 1024px */
 @media screen and (min-width: 1024px) {
     .estiloAbout{
         margin: 0.5rem;
-        height: 70vh;
         display: grid;
-        grid-template-areas: "aboutCompleta imagenAbout";
+        grid-template-areas: "aboutCompleta carouselSlide";
         justify-content: center;
         align-items: center;
-    }
-
-    .imagenAbout{
-        display: block;
     }
 }
 
